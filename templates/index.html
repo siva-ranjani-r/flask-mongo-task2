@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>insert</title>
+        <style>
+            *
+            {
+                background-color: aquamarine;
+                margin: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <table border="2">
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>mobile</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+            {%for i in data%}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.mobile}}</td>
+                <td><a href="/update/{{i.id}}">update</a></td>
+                <td><a href="/delete/{{i.id}}">delete</a></td>
+            </tr>
+            {%endfor%}
+        </table>
+    </body>
+</html>
